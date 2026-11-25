@@ -13,6 +13,6 @@ route.post('/add-blog',authMiddleware,blogController.createBlogController)
 route.get('/all-blogs',authMiddleware,blogController.getAllBlogController)
 route.put('/update-blog/:id',adminMiddleware,blogController.editBlogController)
 route.put('/delet-blog/:id',adminMiddleware,blogController.deleteBlogController)
-route.post('/add-comments',blogController.addCommentController)
+route.put('/add-comments/:id',blogController.addCommentController)
 
 module.exports = route
